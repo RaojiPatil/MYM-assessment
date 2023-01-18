@@ -21,7 +21,7 @@ const Homepage = ({setLoginUser}) => {
         return response.json()
       })
       .then(data => {
-        console.log(data)
+        console.log(data.data)
         setUsers(data.data);
       })
   
@@ -35,12 +35,14 @@ const Homepage = ({setLoginUser}) => {
     return (
         <div className="homepage">
             <main>
-                <div className="productlist">
+                <div className="item-container">
+                <h1>Products</h1>
                     {users && users.map((userObj, index)  => (
-                        <div className="product" key={userObj.id}>
-                               <h2>Day: {userObj.id } </h2>
+                        <div className="card" key={userObj.id}>
+                               <h3>Day: {userObj.id } </h3>
                         {<img src={`${userObj.logo}`} width="200" height="100" />}
                         </div>
+                      
                     ))}
                 </div>
                 </main>

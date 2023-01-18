@@ -21,7 +21,7 @@ const Login = ({ setLoginUser}) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:9002/login", user)
+        axios.post("server-a3z7-qg67y4fsg-raojipatil222-gmailcom.vercel.app", user)
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)

@@ -25,7 +25,7 @@ const Register = () => {
     const register = () => {
         const { name, email, password, reEnterPassword } = user
         if( name && email && password && (password === reEnterPassword)){
-            axios.post("http://localhost:9002/register", user)
+            axios.post("server-a3z7-qg67y4fsg-raojipatil222-gmailcom.vercel.app", user)
             .then( res => {
                 alert(res.data.message)
                 history.push("/login")
